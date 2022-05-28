@@ -65,6 +65,19 @@ public class Main {
 
 
         HashSet<User> userSet = new HashSet<>();
+        User user1 = new User("Kolia", 25, 55555555);
+        User user2 = new User("Kolia", 25, 55555555);
+        User user3 = new User("Kolia", 35, 55555555);
+        userSet.add(user1);
+        userSet.add(user2);
+        userSet.add(user3);
+        System.out.println(userSet);
+
+
+
+
+
+
 
 
 

@@ -21,8 +21,22 @@ public class Main {
         Collection<String> c = list3;
         list2.addAll(list2.size() / 2, list3);
         Collections.sort(list3);
+        System.out.println(list3);
         Collections.reverse(list3);
         System.out.println(list3);
+        System.out.println(list2);
+
+        ListIterator listIterator = list2.listIterator();
+        int i = 0;
+        while (listIterator.hasNext()) {
+            i++;
+            listIterator.next();
+            if (i % 2 == 0) {
+                listIterator.remove();
+            }
+        }
+
+        System.out.println(list2);
         System.out.println();
 
         HashSet<String> set1 = new HashSet<String>();
@@ -72,14 +86,6 @@ public class Main {
         userSet.add(user2);
         userSet.add(user3);
         System.out.println(userSet);
-
-
-
-
-
-
-
-
 
 
     }

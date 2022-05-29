@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<String> list1 = new ArrayList<>();
+        List<String> list1 = new ArrayList<>();
         String[] list = new String[6];
         list[0] = "строка 0";
         list[1] = "строка 1";
@@ -16,7 +16,7 @@ public class Main {
         list[5] = "строка 5";
 
         List<String> newList = Arrays.asList(list);
-        ArrayList<String> list2 = new ArrayList<>(newList);
+        List<String> list2 = new ArrayList<>(newList);
         List<String> list3 = Arrays.asList(list);
         Collection<String> c = list3;
         list2.addAll(list2.size() / 2, list3);
@@ -26,7 +26,7 @@ public class Main {
         System.out.println(list3);
         System.out.println(list2);
 
-        ListIterator listIterator = list2.listIterator();
+        ListIterator<String> listIterator = list2.listIterator();
         int i = 0;
         while (listIterator.hasNext()) {
             i++;
@@ -39,7 +39,7 @@ public class Main {
         System.out.println(list2);
         System.out.println();
 
-        HashSet<String> set1 = new HashSet<String>();
+        Set<String> set1 = new HashSet<String>();
         set1.add("линия 1");
         System.out.println(set1);
         set1.add("линия 2");
@@ -48,13 +48,13 @@ public class Main {
         set1.addAll(list2);
         System.out.println(set1);
         System.out.println();
-        LinkedHashSet<String> set2 = new LinkedHashSet<>();
+        Set<String> set2 = new LinkedHashSet<>();
         set2.addAll(list1);
         set2.addAll(list2);
         System.out.println(set2);
         System.out.println();
 
-        LinkedHashMap<Integer, String> map1 = new LinkedHashMap<Integer, String>();
+        Map<Integer, String> map1 = new LinkedHashMap<Integer, String>();
         map1.put(0, "January");
         map1.put(1, "February");
         map1.put(2, "March");
@@ -89,6 +89,7 @@ public class Main {
 
 
     }
+
 
 
 }
